@@ -123,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
+  pintextfield:
+    dependency: "direct main"
+    description:
+      name: pintextfield
+      sha256: bd4cba5d57891f5e330b5b260951844834a6da746d4c3292bb66431468fd4764
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -186,3 +194,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.19.6 <3.0.0"
+  flutter: ">=1.17.0"
