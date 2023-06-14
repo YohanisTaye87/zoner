@@ -22,29 +22,37 @@ class LoginButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
       width: size.width * 0.7,
-      child: TextButton(
-        onPressed: () {},
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            hasIcon
-                ? Icon(
-                    this.icon,
-                    color: Icol,
-                  )
-                : Text(" "),
-            Text(
-              "${label}",
-              style: TextStyle(
-                color: Tcol,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 10.0),
+        child: TextButton(
+          onPressed: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              hasIcon
+                  ? Icon(
+                      this.icon,
+                      color: Icol,
+                    )
+                  : Text(" "),
+              Padding(
+                padding: const EdgeInsets.all(11.0),
+                child: Text(
+                  "${label}",
+                  style: TextStyle(
+                    color: Tcol,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                  ),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll(
+            col,
+          )),
         ),
-        style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(
-          col,
-        )),
       ),
     );
   }

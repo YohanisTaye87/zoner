@@ -1,5 +1,6 @@
 // ignore: camel_case_types
 import 'package:flutter/material.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 import '../Widget/LoginButton.dart';
 import '../Widget/Textarea.dart';
@@ -50,7 +51,7 @@ class page6 extends StatelessWidget {
                 children: [
                   Textarea(
                     hint: "Full Name",
-                    icon: Icons.person,
+                    icon: EvaIcons.activity,
                   ),
                   Textarea(
                     hint: "Full Name",
@@ -82,7 +83,7 @@ class page6 extends StatelessWidget {
                   hasIcon: true,
                 ),
                 LoginButton(
-                  icon: icon,
+                  icon: EvaIcons.google,
                   label: "SIGN UP WITH GOOGLE",
                   col: Colors.grey,
                   Tcol: Colors.black,
@@ -90,7 +91,7 @@ class page6 extends StatelessWidget {
                   hasIcon: true,
                 ),
                 LoginButton(
-                  icon: Icons.facebook,
+                  icon: EvaIcons.facebook,
                   label: "SIGN UP WITH FACEBOOK",
                   col: Color.fromARGB(255, 8, 26, 185),
                   Tcol: Colors.white,
