@@ -36,7 +36,7 @@ class _PhoneInputState extends State<PhoneInput> {
           formatInput: true,
           keyboardType:
               TextInputType.numberWithOptions(signed: true, decimal: true),
-          // inputBorder: OutlineInputBorder(gapPadding: 10),
+          inputBorder: OutlineInputBorder(gapPadding: 10),
         ),
       ),
     );

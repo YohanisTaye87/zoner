@@ -16,6 +16,7 @@ class page6 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -37,6 +38,20 @@ class page6 extends StatelessWidget {
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
+                    ),
+                    const Text(
+                      "Enter your details to experience the",
+                      style: TextStyle(
+                          color: Color(0xFF6D6D6D),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400),
+                    ),
+                    const Text(
+                      "application",
+                      style: TextStyle(
+                          color: Color(0xFF6D6D6D),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -69,9 +84,9 @@ class page6 extends StatelessWidget {
                 LoginButton(
                   icon: icon,
                   label: "SIGN UP",
-                  col: Colors.yellow,
+                  col: const Color(0xFFFAB631),
                   Tcol: Colors.black,
-                  Icol: Colors.yellow,
+                  Icol: const Color(0xFFFAB631),
                   hasIcon: false,
                 ),
                 LoginButton(
@@ -85,7 +100,7 @@ class page6 extends StatelessWidget {
                 LoginButton(
                   icon: EvaIcons.google,
                   label: "SIGN UP WITH GOOGLE",
-                  col: Colors.grey,
+                  col: const Color(0xFFF5F5F5),
                   Tcol: Colors.black,
                   Icol: Colors.white,
                   hasIcon: true,
@@ -93,7 +108,7 @@ class page6 extends StatelessWidget {
                 LoginButton(
                   icon: EvaIcons.facebook,
                   label: "SIGN UP WITH FACEBOOK",
-                  col: Color.fromARGB(255, 8, 26, 185),
+                  col: const Color(0xFF29369B),
                   Tcol: Colors.white,
                   Icol: Colors.white,
                   hasIcon: true,

@@ -4,8 +4,8 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../Widget/LoginButton.dart';
 
-class page8 extends StatelessWidget {
-  const page8({super.key});
+class OTPScreen extends StatelessWidget {
+  const OTPScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +19,39 @@ class page8 extends StatelessWidget {
             child: Image.asset('Assets/Images/Logo.png'),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 28.0),
+            padding: const EdgeInsets.only(bottom: 28.0, top: 5),
             child: Column(
               children: [
-                Text("Enter the OTP sent to the mobile"),
-                Text("number you entered"),
+                Text(
+                  "OTP VERIFICATION",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 14,
+                  ),
+                ),
+                Text(
+                  "Enter the OTP sent to the mobile",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF6D6D6D),
+                    fontSize: 12,
+                  ),
+                ),
+                Text(
+                  "number you entered",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF6D6D6D),
+                    fontSize: 12,
+                  ),
+                ),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: 13.0,
-              horizontal: 20,
+              vertical: 15.0,
+              horizontal: 10,
             ),
             child: PinCodeTextField(
               appContext: context,

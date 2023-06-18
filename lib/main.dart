@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 // import 'package:pintextfield/pintextfield.dart';
 
 import 'Widget/LoginButton.dart';
-import 'pages/Page6.dart';
-import 'pages/Page7.dart';
-import 'pages/page8.dart';
+import 'models/bar_chart_model.dart';
+import 'pages/NewOrderScreen.dart';
+
+import 'pages/RevenueGreaph.dart';
+import 'pages/SignUpPage.dart';
+import 'pages/LoginPage.dart';
+import 'pages/ViewOrderScreen.dart';
+import 'pages/OTPScreen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,13 +20,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Product Sans',
+        primarySwatch: Colors.blue,
+        textTheme: TextTheme(),
+      ),
       home: Scaffold(
-        body: page8(),
-        // page7(),
+        body:
+            // OTPScreen(),
+            // page7(),
 
-        // page6(),
+            // page6(),
+            NewOrderScreen(),
+        // OrderViewPage(),
       ),
     );
   }
