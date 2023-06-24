@@ -11,7 +11,10 @@ import 'pages/SignUpPage.dart';
 import 'pages/LoginPage.dart';
 import 'pages/ViewOrderScreen.dart';
 import 'pages/OTPScreen.dart';
+import 'pages/customerPages/ManageAccountPage.dart';
+import 'pages/customerPages/Orders.dart';
 import 'pages/customerPages/Profile.dart';
+import 'pages/customerPages/Whishlists.dart';
 
 void main() => runApp(const MyApp());
 
@@ -30,10 +33,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => ProfilePage(),
-        /*   "/ManageAccount":(context) => ,
-       "/Orders":(context) => ,
-       "/Whishlist":(context) => ,
-       "/Share":(context) => ,
+        "/ManageAccount": (context) => ManageAccount(),
+        "/Orders": (context) => OrdersPage(),
+        "/Whishlist": (context) => WhishlistPage(),
+        /*  "/Share":(context) => ,
        "/Settings":(context) => , */
       },
       /*  home: /*  Scaffold(
