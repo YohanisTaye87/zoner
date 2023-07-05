@@ -11,16 +11,16 @@ class IdentityOfPersonAndAvatar extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(right: 5),
+            margin: const EdgeInsets.only(right: 5),
             width: 45.81,
             height: 50,
-            child: CircleAvatar(
+            child: const CircleAvatar(
               backgroundImage: AssetImage('Assets/Images/face.jpeg'),
             ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
                 "Jane Matthews",
                 style: TextStyle(

@@ -19,12 +19,12 @@ class ManageAccount extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: Colors.black,
             ),
           ),
-          title: Text(
+          title: const Text(
             "Manage Account",
             style: TextStyle(
               color: Colors.black,
@@ -41,7 +41,7 @@ class ManageAccount extends StatelessWidget {
                 child: Column(
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           "Account Information",
                           style: TextStyle(
@@ -54,26 +54,31 @@ class ManageAccount extends StatelessWidget {
                       padding: const EdgeInsets.all(15.0),
                       child: Column(
                         children: [
-                          ManageAccountTextfield(
+                          const ManageAccountTextfield(
                             hint: "+254 712 099 088",
                             lable: "Phone Number",
                           ),
-                          ManageAccountTextfield(
+                          const ManageAccountTextfield(
                             hint: "janedoe@gmail.com",
                             lable: "Email Address",
                           ),
-                          ManageAccountTextfield(
+                          const ManageAccountTextfield(
                             hint: "janedoe@gmail.com",
                             lable: "Addresses",
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           TextButton(
                             onPressed: () {},
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll(
+                                Colors.grey.withOpacity(0.3),
+                              ),
+                            ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.add,
                                   color: Colors.black,
@@ -88,11 +93,6 @@ class ManageAccount extends StatelessWidget {
                                   ),
                                 )
                               ],
-                            ),
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(
-                                Colors.grey.withOpacity(0.3),
-                              ),
                             ),
                           ),
 
@@ -110,9 +110,14 @@ class ManageAccount extends StatelessWidget {
                 ),
                 child: TextButton(
                   onPressed: () {},
+                  style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                      Colors.amber,
+                    ),
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Save Profile",
                         style: TextStyle(
@@ -122,11 +127,6 @@ class ManageAccount extends StatelessWidget {
                         ),
                       )
                     ],
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(
-                      Colors.amber,
-                    ),
                   ),
                 ),
               ),

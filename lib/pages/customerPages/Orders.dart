@@ -14,20 +14,20 @@ class OrdersPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back,
                 color: Colors.black,
               )),
           elevation: 0,
           backgroundColor: Colors.white,
-          title: Text(
+          title: const Text(
             "Orders",
             style: TextStyle(
               color: Colors.black,
             ),
           ),
           centerTitle: true,
-          bottom: TabBar(
+          bottom: const TabBar(
             indicatorColor: Colors.amber,
             labelColor: Colors.black,
             tabs: [
@@ -53,24 +53,24 @@ class FirstScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),
-      child: Container(
+      child: SizedBox(
         width: size.width,
         height: size.height,
         child: ListView.separated(
           itemBuilder: (context, index) {
             return ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage('Assets/Images/face.jpeg'),
                 radius: 40,
               ),
-              title: Text(
+              title: const Text(
                 "Modern Kitchen",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
                 ),
               ),
-              subtitle: Text.rich(
+              subtitle: const Text.rich(
                 TextSpan(
                   children: [
                     TextSpan(
@@ -90,8 +90,11 @@ class FirstScreen extends StatelessWidget {
               ),
               trailing: TextButton(
                 onPressed: () {},
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(Colors.grey.withOpacity(0.2))),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0),
                   child: Text(
                     "Reorder",
                     style: TextStyle(
@@ -99,15 +102,12 @@ class FirstScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStatePropertyAll(Colors.grey.withOpacity(0.2))),
               ),
             );
           },
           itemCount: 2,
-          separatorBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.all(15.0),
+          separatorBuilder: (context, index) => const Padding(
+            padding: EdgeInsets.all(15.0),
             child: Divider(
               color: Color.fromARGB(255, 193, 192, 192),
               height: 1,
@@ -126,12 +126,12 @@ class SecondScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),
-      child: Container(
+      child: SizedBox(
         width: size.width,
         height: size.height,
         child: ListView.separated(
           itemBuilder: (context, index) {
-            return ListTile(
+            return const ListTile(
               leading: CircleAvatar(
                 backgroundImage: AssetImage('Assets/Images/face.jpeg'),
                 radius: 40,
@@ -164,8 +164,8 @@ class SecondScreen extends StatelessWidget {
             );
           },
           itemCount: 2,
-          separatorBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.all(15.0),
+          separatorBuilder: (context, index) => const Padding(
+            padding: EdgeInsets.all(15.0),
             child: Divider(
               color: Color.fromARGB(255, 193, 192, 192),
               height: 1,

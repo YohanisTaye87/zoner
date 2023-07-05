@@ -21,7 +21,7 @@ class OTPScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 28.0, top: 5),
             child: Column(
-              children: [
+              children: const [
                 Text(
                   "OTP VERIFICATION",
                   style: TextStyle(
@@ -60,7 +60,7 @@ class OTPScreen extends StatelessWidget {
               cursorHeight: 19,
               cursorColor: Colors.black,
               enableActiveFill: true,
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
               ),
@@ -70,20 +70,17 @@ class OTPScreen extends StatelessWidget {
                   blurRadius: 1,
                   blurStyle: BlurStyle.normal,
                   spreadRadius: 0,
-                  offset: Offset(0, 4),
+                  offset: const Offset(0, 4),
                 )
               ],
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               pinTheme: PinTheme(
                 shape: PinCodeFieldShape.box,
-
                 fieldWidth: 50,
                 activeFillColor: Colors.white,
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(10),
                 ),
-                // disabledColor: Colors.grey,
-
                 inactiveColor: Colors.black,
                 borderWidth: 1,
                 activeColor: Colors.blue,
@@ -100,17 +97,42 @@ class OTPScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 28.0),
             child: Column(
               children: [
-                LoginButton(
-                  icon: Icons.person,
-                  label: "VERIFY CODE",
-                  col: Colors.amber,
-                  Tcol: Colors.black,
-                  Icol: Colors.yellow,
-                  hasIcon: false,
+                SizedBox(
+                  width: size.width * 0.7,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/nav_bar");
+                      },
+                      style: const ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll(
+                        Colors.amber,
+                      )),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text(" "),
+                          Padding(
+                            padding: EdgeInsets.all(11.0),
+                            child: Text(
+                              "VERIFY CODE",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 18.0),
+                const Padding(
+                  padding: EdgeInsets.only(top: 18.0),
                   child: LoginButton(
+                    register: true,
                     icon: Icons.person,
                     label: "RESEND CODE(43 secs)",
                     col: Colors.black,

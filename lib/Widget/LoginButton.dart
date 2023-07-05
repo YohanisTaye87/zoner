@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({
-    super.key,
-    required this.icon,
-    required this.label,
-    required this.col,
-    required this.Tcol,
-    required this.Icol,
-    required this.hasIcon,
-  });
+  const LoginButton(
+      {super.key,
+      required this.icon,
+      required this.label,
+      required this.col,
+      required this.Tcol,
+      required this.Icol,
+      required this.hasIcon,
+      required this.register});
 
   final IconData icon;
   final String label;
@@ -17,6 +17,7 @@ class LoginButton extends StatelessWidget {
   final Color Tcol;
   final Color Icol;
   final bool hasIcon;
+  final bool register;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -25,20 +26,28 @@ class LoginButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 10.0),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            !register
+                ? Navigator.pushNamed(context, "/login")
+                : Navigator.pushNamed(context, "/OTP");
+          },
+          style: ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll(
+            col,
+          )),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               hasIcon
                   ? Icon(
-                      this.icon,
+                      icon,
                       color: Icol,
                     )
-                  : Text(" "),
+                  : const Text(" "),
               Padding(
                 padding: const EdgeInsets.all(11.0),
                 child: Text(
-                  "${label}",
+                  label,
                   style: TextStyle(
                     color: Tcol,
                     fontWeight: FontWeight.bold,
@@ -48,10 +57,6 @@ class LoginButton extends StatelessWidget {
               ),
             ],
           ),
-          style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(
-            col,
-          )),
         ),
       ),
     );

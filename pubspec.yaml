@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.6 <3.0.0"
+  sdk: ">=2.18.0 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -37,9 +37,13 @@ dependencies:
   # international_phone_input: ^1.0.4
   pintextfield: ^0.1.1
   pin_code_fields: ^7.4.0
-  intl_phone_number_input: ^0.7.3+1
   eva_icons_flutter: ^3.1.0
   charts_flutter: ^0.12.0
+  intl_phone_number_input: ^0.7.2
+  carousel_slider: ^4.2.1
+  shimmer: ^3.0.0
+  google_maps_flutter: ^2.3.0
+  custom_info_window: ^1.0.1
 
 dev_dependencies:
   flutter_test:

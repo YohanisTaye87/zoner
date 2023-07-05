@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:zonerapp/Screens/boot_screen.dart';
+import 'package:zonerapp/Widget/bottom_nav.dart';
+import 'package:zonerapp/pages/LoginPage.dart';
+import 'package:zonerapp/pages/OTPScreen.dart';
+import 'package:zonerapp/pages/SignUpPage.dart';
 
 // import 'package:international_phone_input/international_phone_input.dart';
 // import 'package:pintextfield/pintextfield.dart';
 
-import 'Widget/LoginButton.dart';
-import 'models/bar_chart_model.dart';
-import 'pages/NewOrderScreen.dart';
-import 'pages/RevenueGreaph.dart';
-import 'pages/SignUpPage.dart';
-import 'pages/LoginPage.dart';
-import 'pages/ViewOrderScreen.dart';
-import 'pages/OTPScreen.dart';
 import 'pages/customerPages/ManageAccountPage.dart';
 import 'pages/customerPages/Orders.dart';
-import 'pages/customerPages/Profile.dart';
 import 'pages/customerPages/Whishlists.dart';
 
 void main() => runApp(const MyApp());
@@ -28,14 +24,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Product Sans',
         primarySwatch: Colors.blue,
-        textTheme: TextTheme(),
+        textTheme: const TextTheme(),
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => ProfilePage(),
-        "/ManageAccount": (context) => ManageAccount(),
-        "/Orders": (context) => OrdersPage(),
-        "/Whishlist": (context) => WhishlistPage(),
+        '/': (context) => const BootScreen(),
+        'signup': (context) => const SignUP(),
+        "/login": (context) => const logInPage(),
+        "/OTP": (context) => const OTPScreen(),
+        "/ManageAccount": (context) => const ManageAccount(),
+        "/Orders": (context) => const OrdersPage(),
+        "/Whishlist": (context) => const WhishlistPage(),
+        "/nav_bar": (context) => const BottomNavBar()
         /*  "/Share":(context) => ,
        "/Settings":(context) => , */
       },

@@ -25,18 +25,18 @@ class _PhoneInputState extends State<PhoneInput> {
           /*     onInputValidated: (bool value) {
             print(value);
           }, */
-          selectorConfig: SelectorConfig(
+          selectorConfig: const SelectorConfig(
             selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
           ),
           ignoreBlank: false,
           autoValidateMode: AutovalidateMode.disabled,
-          selectorTextStyle: TextStyle(color: Colors.black),
+          selectorTextStyle: const TextStyle(color: Colors.black),
           initialValue: number,
           textFieldController: controller,
           formatInput: true,
-          keyboardType:
-              TextInputType.numberWithOptions(signed: true, decimal: true),
-          inputBorder: OutlineInputBorder(gapPadding: 10),
+          keyboardType: const TextInputType.numberWithOptions(
+              signed: true, decimal: true),
+          inputBorder: const OutlineInputBorder(gapPadding: 10),
         ),
       ),
     );

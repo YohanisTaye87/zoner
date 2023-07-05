@@ -16,12 +16,12 @@ class WhishlistPage extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: Colors.black,
             ),
           ),
-          title: Text(
+          title: const Text(
             "Wishlist",
             style: TextStyle(
               color: Colors.black,
@@ -41,7 +41,7 @@ class WhishlistPage extends StatelessWidget {
                   height: size.height * 0.13,
                   decoration: BoxDecoration(
                       color: Colors.grey.withOpacity(0.3),
-                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                      borderRadius: const BorderRadius.all(Radius.circular(5))),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -52,7 +52,7 @@ class WhishlistPage extends StatelessWidget {
                             child: Container(
                               width: 80,
                               height: double.infinity,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage('Assets/Images/cup.png'),
                                     fit: BoxFit.cover,
@@ -64,7 +64,7 @@ class WhishlistPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
-                              children: [
+                              children: const [
                                 Text(
                                   "Happy Tea Mugs",
                                   style: TextStyle(
@@ -101,7 +101,7 @@ class WhishlistPage extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               backgroundColor: Colors.white,
                               radius: 11,
                               child: Icon(
@@ -112,6 +112,11 @@ class WhishlistPage extends StatelessWidget {
                             ),
                             TextButton(
                               onPressed: () {},
+                              style: const ButtonStyle(
+                                backgroundColor: MaterialStatePropertyAll(
+                                  Colors.amber,
+                                ),
+                              ),
                               child: Padding(
                                 padding: const EdgeInsets.all(4.0),
                                 child: Text(
@@ -121,11 +126,6 @@ class WhishlistPage extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 12,
                                   ),
-                                ),
-                              ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll(
-                                  Colors.amber,
                                 ),
                               ),
                             )

@@ -13,21 +13,21 @@ class Textarea extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextFormField(
-        decoration: const InputDecoration(
-          enabledBorder: OutlineInputBorder(
+        decoration: InputDecoration(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.grey,
               style: BorderStyle.solid,
             ),
           ),
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.grey,
               style: BorderStyle.solid,
             ),
           ),
-          prefixIcon: Icon(Icons.person),
-          hintText: "Hint",
+          prefixIcon: Icon(icon),
+          hintText: hint,
         ),
       ),
     );

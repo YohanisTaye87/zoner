@@ -13,19 +13,19 @@ class buttn extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {},
+      style: ButtonStyle(
+        backgroundColor: MaterialStatePropertyAll(
+          Color(color),
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 7.0, horizontal: 30),
         child: Text(
           lable,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 12,
           ),
-        ),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(
-          Color(color),
         ),
       ),
     );

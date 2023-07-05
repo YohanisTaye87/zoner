@@ -63,8 +63,8 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Profile",
                   style: TextStyle(
@@ -77,7 +77,7 @@ class ProfilePage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       backgroundImage: AssetImage('Assets/Images/face.jpeg'),
                       radius: 28,
                     ),
@@ -85,7 +85,7 @@ class ProfilePage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Jane Matthews",
                             style: TextStyle(
@@ -115,7 +115,7 @@ class ProfilePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Account",
                       style: TextStyle(
                         fontFamily: 'Product Sans',
@@ -123,7 +123,7 @@ class ProfilePage extends StatelessWidget {
                         fontSize: 14,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: size.width,
                       height: size.height * 0.37,
                       child: ListView.builder(
@@ -152,7 +152,7 @@ class ProfilePage extends StatelessWidget {
                         itemCount: 5,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Support",
                       style: TextStyle(
                         fontFamily: 'Product Sans',
@@ -160,7 +160,7 @@ class ProfilePage extends StatelessWidget {
                         fontSize: 14,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: size.width,
                       height: size.height * 0.13,
                       child: ListView.builder(
@@ -183,7 +183,7 @@ class ProfilePage extends StatelessWidget {
                                       Profilebutton["Support"][index]["fIcon"],
                                       color: Colors.black,
                                     )
-                                  : Text(""),
+                                  : const Text(""),
                             ),
                           );
                         },
@@ -191,12 +191,12 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 50),
+                      margin: const EdgeInsets.only(top: 50),
                       child: InkWell(
                         onTap: () {
                           print(" this is the lOGING OUT BUTT");
                         },
-                        child: ListTile(
+                        child: const ListTile(
                           leading: Icon(Icons.logout),
                           title: Text("Logout"),
                         ),
@@ -215,5 +215,5 @@ class ProfilePage extends StatelessWidget {
 }
 
 Widget SupprtListTile() {
-  return ListTile();
+  return const ListTile();
 }

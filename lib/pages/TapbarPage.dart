@@ -18,7 +18,7 @@ class _TapBarPageState extends State<TapBarPage> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 1,
-          title: Text(
+          title: const Text(
             "Modern Kitchen",
             style: TextStyle(
               color: Colors.black,
@@ -27,20 +27,20 @@ class _TapBarPageState extends State<TapBarPage> {
             ),
           ),
           centerTitle: true,
-          leading: Icon(
+          leading: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
-          actions: [
+          actions: const [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 28.0),
+              padding: EdgeInsets.symmetric(horizontal: 28.0),
               child: Icon(
                 Icons.search,
                 color: Colors.black,
               ),
             ),
           ],
-          bottom: TabBar(
+          bottom: const TabBar(
             indicatorColor: Colors.amber,
             labelColor: Colors.black,
             overlayColor: MaterialStatePropertyAll(Colors.white),
@@ -84,7 +84,7 @@ class NewOrderScreen extends StatelessWidget {
           vertical: 2,
         ),
         child: Column(
-          children: [
+          children: const [
             OrderinPeopleList(label: "View Order"),
             OrderinPeopleList(label: "View Order"),
             OrderinPeopleList(label: "View Order"),
@@ -109,7 +109,7 @@ class InProgressScreen extends StatelessWidget {
           vertical: 2,
         ),
         child: Column(
-          children: [
+          children: const [
             OrderinPeopleList(label: "Order Ready"),
             OrderinPeopleList(label: "View Order"),
             OrderinPeopleList(label: "View Order"),
@@ -126,7 +126,7 @@ class InProgressScreen extends StatelessWidget {
 class ReadyOrdersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('ReadyOrdersScreen'),
     );
   }
@@ -135,7 +135,7 @@ class ReadyOrdersScreen extends StatelessWidget {
 class DispatchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('DispatchScreen'),
     );
   }

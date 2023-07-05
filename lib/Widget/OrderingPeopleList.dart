@@ -20,30 +20,30 @@ class OrderinPeopleList extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              IdentityOfPersonAndAvatar(),
+              const IdentityOfPersonAndAvatar(),
               Container(
                 width: 100,
                 height: 32,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
                 ),
                 child: TextButton(
                   onPressed: () {},
+                  style: const ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(Color(0xFF4CAF50)),
+                  ),
                   child: Text(
                     label,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Product Sans',
                       fontWeight: FontWeight.bold,
                       fontSize: 12,
                       color: Color(0xFFFFFFFF),
                       // height: 14.56,
                     ),
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStatePropertyAll(Color(0xFF4CAF50)),
                   ),
                 ),
               )
